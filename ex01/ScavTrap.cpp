@@ -42,5 +42,5 @@ void ScavTrap::attack(const string& target) {
 }
 
 void ScavTrap::guardGate() {
-    WriteLine(name + " is now in Gate keeper mode!");
+    WriteLine(name + " is now gate keeping!");
 }
