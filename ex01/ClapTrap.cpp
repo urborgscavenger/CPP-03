@@ -1,5 +1,22 @@
 #include "ClapTrap.hpp"
 
+void WriteLine(const string& message) {
+    std::cout << message << std::endl;
+}
+
+string toString(int value) {
+    if (value == 0) return "0";
+    string result;
+    bool negative = value < 0;
+    if (negative) value = -value;
+    while (value > 0) {
+        result = char('0' + value % 10) + result;
+        value /= 10;
+    }
+    if (negative) result = "-" + result;
+    return result;
+}
+
 ClapTrap::ClapTrap() : name("Default"), hitPoints(10), energyPoints(10), attackDamage(0) {
     WriteLine("Default ClapTrap constructed!");
 }

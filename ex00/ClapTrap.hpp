@@ -6,22 +6,8 @@
 
 typedef std::string string;
 
-inline void WriteLine(const string& message) {
-    std::cout << message << std::endl;
-}
-
-inline string toString(int value) {
-    if (value == 0) return "0";
-    string result;
-    bool negative = value < 0;
-    if (negative) value = -value;
-    while (value > 0) {
-        result = char('0' + value % 10) + result;
-        value /= 10;
-    }
-    if (negative) result = "-" + result;
-    return result;
-}
+void WriteLine(const string& message);
+string toString(int value);
 
 class ClapTrap {
 private:
